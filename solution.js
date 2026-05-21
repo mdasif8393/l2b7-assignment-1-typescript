@@ -21,5 +21,12 @@ var checkType = function (stringNumber) {
         return "Wrong Input";
     }
 };
-var result3 = checkType(undefined);
-console.log(result3);
+var result3 = checkType(23);
+//* Problem 4
+var getProperty = function (object, key) {
+    var result = object[key];
+    return result;
+};
+var user = { id: 1, name: "John Doe", age: 21 };
+var result4 = getProperty(user, "age");
+console.log(result4);

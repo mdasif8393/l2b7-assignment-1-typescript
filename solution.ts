@@ -31,3 +31,14 @@ const checkType = (stringNumber: StringOrNumber): string => {
 };
 
 const result3 = checkType(23);
+
+//* Problem 4
+const getProperty = <X, Y extends keyof X>(object: X, key: Y): X[Y] => {
+  const result = object[key];
+  return result;
+};
+
+const user = { id: 1, name: "John Doe", age: 21 };
+const result4 = getProperty(user, "age");
+
+console.log(result4);
